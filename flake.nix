@@ -18,6 +18,9 @@
         qtserialport
       ]);
     };
+    overlays.default = (final: prev: {
+      js8call = self.packages.x86_64-linux.js8call;
+    });
     packages.x86_64-linux.js8call = let
       pkgs = import nixpkgs { system = "x86_64-linux"; };
     in pkgs.stdenv.mkDerivation {
