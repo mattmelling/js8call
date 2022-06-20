@@ -47,7 +47,7 @@ if (NOT PC_HAMLIB_FOUND)
 
   # libusb-1.0 has no pkg-config file on Windows so we have to find it
   # ourselves
-  find_library (LIBUSB NAMES usb-1.0 PATH_SUFFIXES MinGW32/dll)
+  find_library (LIBUSB NAMES libusb-1.0 usb-1.0 PATH_SUFFIXES MinGW32/dll)
   if (LIBUSB)
     set (hamlib_EXTRA_LIBRARIES ${LIBUSB} ${hamlib_EXTRA_LIBRARIES})
     get_filename_component (hamlib_libusb_path ${LIBUSB} PATH)

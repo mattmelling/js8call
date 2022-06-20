@@ -160,7 +160,7 @@
 #include <QFont>
 #include <QFontDialog>
 #include <QColorDialog>
-#include <QSerialPortInfo>
+#include <QtSerialPort/QSerialPortInfo>
 #include <QScopedPointer>
 #include <QDateTimeEdit>
 #include <QProcess>
