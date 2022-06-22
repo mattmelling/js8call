@@ -33,14 +33,16 @@
             --replace "/usr/share/pixmaps" "$out/share/pixmaps" \
             --replace "/usr/bin/" "$out/bin"
       '';
-      nativeBuildInputs = with pkgs.qt5; [ wrapQtAppsHook ];
+      nativeBuildInputs = with pkgs; [
+        qt5.wrapQtAppsHook
+        cmake
+        gfortran
+      ];
       buildInputs = with pkgs; [
         pkg-config
         hamlib
-        libusb1
-        cmake
-        gfortran
-        fftw fftwFloat
+        fftw
+        fftwFloat
       ] ++ (with pkgs.qt5; [
         qtbase
         qtmultimedia

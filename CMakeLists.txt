@@ -558,7 +558,6 @@ find_package (FFTW3 COMPONENTS double single threads REQUIRED)
 #
 # libhamlib setup
 #
-set (hamlib_STATIC 1)
 find_package (hamlib 3 REQUIRED)
 find_program (RIGCTL_EXE rigctl)
 find_program (RIGCTLD_EXE rigctld)
