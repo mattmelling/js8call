@@ -49,5 +49,8 @@
         qtserialport
       ]);
     };
+    hydraJobs = {
+      inherit (self) packages;
+    };
   };
 }
